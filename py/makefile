@@ -1,5 +1,5 @@
 PY_DIR=/home/kai/A_Sphinx/Teach/TM/source/tm-snippets/py/
-IPYNB_DIR=/home/kai/A_Sphinx/Teach/TM/source/tm-snippets/ipynb/
+IPYNB_DIR=/home/kai/A_Sphinx/Teach/TM/source/tm		-snippets/ipynb/
 
 PY_FILES = $(shell find $(PY_DIR) -name '*.py')
 IPYNB_FILES = $(patsubst $(PY_DIR)%.py, $(IPYNB_DIR)%.ipynb, $(PY_FILES))
