@@ -6,7 +6,7 @@
 
 ## Usage
 
-Option 1: Use with [Google Colaboratory](https://colab.research.google.com), e.g. open the following task about a bilinear [form](https://colab.research.google.com/github/kassbohm/tm-snippets/blob/master/de/ipynb/trafo_passive.ipynb).
+Option 1: Use with [Google Colaboratory](https://colab.research.google.com), e.g. open the following task about a bilinear [form](https://colab.research.google.com/github/kassbohm/tm-snippets/blob/master/ipynb/trafo_passive.ipynb).
 
 Option 2: Run Python-Code or Jupyter-Notebook elsewhere.
 
