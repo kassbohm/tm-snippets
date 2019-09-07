@@ -8,7 +8,7 @@
 
 Option 1: Use with [Google Colaboratory](https://colab.research.google.com), e.g. open the following tasks:
 
-* Task from de: [5.145](https://colab.research.google.com/github/kassbohm/hib-snippets/blob/master/de/ipynb/5.145.ipynb)
+* Task from de: [5.145](https://colab.research.google.com/github/kassbohm/tm-snippets/blob/master/de/ipynb/trafo_passive.ipynb)
 
 Option 2: Run Python-Code or Jupyter-Notebook elsewhere.
 
