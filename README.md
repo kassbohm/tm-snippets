@@ -8,7 +8,7 @@
 
 Option 1: Use with [Google Colaboratory](https://colab.research.google.com), e.g. open the following task about a bilinear [form](https://colab.research.google.com/github/kassbohm/tm-snippets/blob/master/ipynb/trafo_passive.ipynb).
 
-Option 2: Run Python-Code or Jupyter-Notebook elsewhere.
+Option 2: Run Jupyter-Notebook elsewhere.
 
 ## Issues
 Please open an issue, if you think, that something is incorrect or misleading.
