@@ -1,1 +1,0 @@
-../../TM_A/TM_2/fem-rod-3-node/fem-rod-3-node_compare.py
