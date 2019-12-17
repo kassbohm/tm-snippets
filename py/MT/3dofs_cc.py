@@ -1,1 +1,0 @@
-/home/kai/A_Sphinx/Teach/gu-mt/source/Structural_Mechanics/Vibrations/3_DOFs/3dofs_cc.py
