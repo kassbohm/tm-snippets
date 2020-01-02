@@ -52,7 +52,7 @@ kN     = k*Newton
 
 # ---
 
-c, m = var("c, m", positive=True)
+c, mass = var("c, mass", positive=True)
 
 K = Matrix([
 [2*c,  -c],
@@ -60,14 +60,17 @@ K = Matrix([
 ])
 
 M = Matrix([
-[3*m/2, 0],
-[0, m],
+[3*mass/2, 0],
+[0, mass],
 ])
 
 
 EI = 210 *GPa * 5100 *cm**4
 l = S(45)/10 *m
-sub_list = [ (m, 1000*kg) , (c, 24*EI/l**3) ]
+sub_list = [
+    (mass, 1000*kg    ),
+    (c, 24*EI/l**3 ),
+    ]
 
 # ξ = λ²
 xi = var("xi")
@@ -95,6 +98,46 @@ for i in range(len(sol_xi)):
     pprint("\nEigenvector:")
     pprint(sol)
 
+# Omega 1:
+pprint("\nw1 / (1/s):")
+w1 = sqrt(2*c/mass)
+tmp = w1.subs(sub_list)
+tmp /= (1/s)
+tmp = iso_round(tmp, 0.1)
+pprint(tmp)
+
+
+w = w1.subs(sub_list)
+w_in_Hz = w / (1/s)
+
+pprint("\nPeriod T / s:")
+T = 2*pi/w
+T_in_s = T / s
+T_in_s = N(T_in_s,20)
+T_in_s = float(T_in_s)
+tmp = T_in_s
+tmp = iso_round(tmp,0.001)
+pprint(tmp)
+
+from pylab import *
+from numpy import linspace
+t_in_s = linspace(0,T_in_s,100)
+wt =  w_in_Hz * t_in_s
+cos_wt = array([cos(float(x)) for x in wt])
+w2_in_mm = -10 * cos_wt
+w3_in_mm = +10 * cos_wt
+
+
+plt.axis()
+plt.grid()
+plt.plot(t_in_s, w2_in_mm, "b-", label=r"$w2\,\, /  \,\, \mathrm{mm}$")
+plt.plot(t_in_s, w3_in_mm, "r--", label=r"$w3\,\, /  \,\, \mathrm{mm}$")
+plt.xlabel(r"$t  \,\, /  \,\, \mathrm{s}$")
+plt.legend()
+plt.savefig('2dofs_motion.svg', transparent=True)
+
+plt.show()
+
 # Characteristic equation:
 #    2             ⎛      3⋅m⋅ξ⎞
 # - c  + (c + m⋅ξ)⋅⎜2⋅c + ─────⎟ = 0
@@ -119,3 +162,4 @@ for i in range(len(sol_xi)):
 # ⎧    2⋅w₃⎫
 # ⎨w₂: ────⎬
 # ⎩     3  ⎭
+

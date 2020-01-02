@@ -1,1 +1,0 @@
-/home/kai/Desktop/CS/cs.py
