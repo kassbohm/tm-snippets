@@ -110,7 +110,7 @@ pprint(tmp)
 w = w1.subs(sub_list)
 w_in_Hz = w / (1/s)
 
-pprint("\nPeriod T / s:")
+pprint("\nPeriod T1 / s:")
 T = 2*pi/w
 T_in_s = T / s
 T_in_s = N(T_in_s,20)
@@ -135,31 +135,35 @@ plt.plot(t_in_s, w3_in_mm, "r--", label=r"$w3\,\, /  \,\, \mathrm{mm}$")
 plt.xlabel(r"$t  \,\, /  \,\, \mathrm{s}$")
 plt.legend()
 plt.savefig('2dofs_motion.svg', transparent=True)
-
 plt.show()
 
 # Characteristic equation:
-#    2             ⎛      3⋅m⋅ξ⎞
-# - c  + (c + m⋅ξ)⋅⎜2⋅c + ─────⎟ = 0
-#                  ⎝        2  ⎠
+#    2                ⎛      3⋅mass⋅ξ⎞
+# - c  + (c + mass⋅ξ)⋅⎜2⋅c + ────────⎟ = 0
+#                     ⎝         2    ⎠
 #
 #
 # Eigenvalue:
 # -2⋅c
 # ─────
-#   m
+#  mass
 #
 # Eigenvector:
 # {w₂: -w₃}
 #
 #
 # Eigenvalue:
-# -c
-# ───
-# 3⋅m
+#  -c
+# ──────
+# 3⋅mass
 #
 # Eigenvector:
 # ⎧    2⋅w₃⎫
 # ⎨w₂: ────⎬
 # ⎩     3  ⎭
-
+#
+# w1 / (1/s):
+# 75.1
+#
+# Period T1 / s:
+# 0.084
