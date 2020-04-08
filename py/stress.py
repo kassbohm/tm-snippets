@@ -1,1 +1,1 @@
-../../TM_A/TM_0/trafo/Maths/stress.py
+../../TM_A/TM_0/trafo_tensor/Maths/stress.py
