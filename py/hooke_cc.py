@@ -1,1 +1,0 @@
-../../TM_A/TM_2/hooke/hooke_cc.py
