@@ -1,1 +1,0 @@
-/home/kai/A_Sphinx/Teach/thg/source/9e/9e_Uebungen/Uebung_09/lambacher_schweizer_9_page_92_task_8_cc.py
