@@ -12,4 +12,4 @@ $(IPYNB_DIR)%.ipynb: $(PY_DIR)%.py
 	/usr/local/bin/ipynb-py-convert $< $@
 
 clean:
-	trash-put $(IPYNB_DIR)*.ipynb
+	trash-put $(IPYNB_FILES)
